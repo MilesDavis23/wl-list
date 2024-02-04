@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThemeProvider, CssBaseline, Box } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
+import RouteLayout from "./layout/Layout";
+import backgroundImage from './images/wowBG.jpg'
+import { theme } from "./theme/theme";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+        sx={{
+          height: '100vh', 
+          backgroundImage: `url(${backgroundImage})`, 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center',
+        }}
+      >
+        <BrowserRouter>
+          <RouteLayout />
+          {/* Here comes the ContextProvider / main routes */}
+        </BrowserRouter>
+      </Box>
+    </ThemeProvider>
   );
 }
 
