@@ -6,11 +6,11 @@ const registerRoute = 'register';
 
 const checkUser = async (discordId, twitterUsername) => {
   try {
-    const response = await axios.post(`${apiUrl}/${checkRoute}`, {
+    const response = await axios.post(`${apiUrl}${checkRoute}`, {
       discordId,
       twitterUsername
     });
-    console.log('Check user response:', response.data);
+    //console.log('Check user response:', response.data);
     return response.data;
   } catch (error) {
     if (error.response) {
@@ -26,12 +26,12 @@ const checkUser = async (discordId, twitterUsername) => {
 
 const registerUser = async (discordId, twitterUsername, address) => {
   try {
-    const response = await axios.post(`${apiUrl}/${registerRoute}`, {
+    const response = await axios.post(`${apiUrl}${registerRoute}`, {
       discordId,
       twitterUsername,
       address
     });
-    console.log('User registered successfully:', response.data);
+    //console.log('User registered successfully:', response.data);
     return response.data;
   } catch (error) {
     if (error.response) {
@@ -45,7 +45,6 @@ const registerUser = async (discordId, twitterUsername, address) => {
     }
   }
 };
-
 
 export {
     checkUser,
