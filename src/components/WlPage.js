@@ -8,7 +8,7 @@ const WaitList = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            minHeight="100vh"
+            minHeight="75vh"
             flexDirection="column"
         >
             <Grid 
@@ -17,7 +17,7 @@ const WaitList = () => {
                 flexDirection='column' 
                 sx={
                     {
-                        width: '40%', 
+                        width: '50%', 
                         padding: 1,
                         border: 1,
                         borderColor: '#716D6C',
