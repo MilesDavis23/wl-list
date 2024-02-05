@@ -1,6 +1,6 @@
 # Base UI for registering WL spots
 
-Simple solution for registering WL spots.
+Simple application for registering addresses for wl. 
 
 ## Available Scripts
 
@@ -8,7 +8,5 @@ In the project directory, you can run:
 
 ### `npm install`
 
-### `npm test`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**more coming soon**
 
