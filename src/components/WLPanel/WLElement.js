@@ -5,13 +5,13 @@ import { checkUser, registerUser } from '../utils/wlFunctions';
 import FeedbackModal from './FeedBackElement';
 
 const AskForAddress = ({ userData, setAddressInput, setFeedbackOpen, setFeedbackMessage }) => {
-  const [ walletRegistered, setWalletRegistered ] = useState(false)
+  //const [ walletRegistered, setWalletRegistered ] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
     const registerResp = await registerUser(userData.discordId, userData.twitterUsername, data.address);
     if (registerResp.message === 'New user is registered.') {
-      setWalletRegistered(true);
+      //setWalletRegistered(true);
       setFeedbackMessage('Congratulation! Address is registered!')
       setFeedbackOpen(true);
     }

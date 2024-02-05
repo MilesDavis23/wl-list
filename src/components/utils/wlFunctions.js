@@ -1,8 +1,11 @@
 import axios from 'axios';
 
 const apiUrl = process.env.REACT_APP_WLLIST_WL_USERS_URL;
-const checkRoute = 'check';
-const registerRoute = 'register';
+const checkRoute = 'users/check';
+const registerRoute = 'users/register';
+
+
+console.log(apiUrl)
 
 const checkUser = async (discordId, twitterUsername) => {
   try {
